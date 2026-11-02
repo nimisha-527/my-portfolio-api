@@ -1,0 +1,23 @@
+{
+    "tabs": [
+        "Home",
+        "Projects",
+        "Contact",
+        "About"
+    ],
+    "experienceLabel": "Experience",
+    "aboutPage": {
+        "aboutLabel": "About",
+        "summary": "$summary"
+    },
+    "contactPage": {
+        "contactLabel": "Contact",
+        "emailAddress": "$email"
+    },
+    "homePage": {
+        "yourName": "$name",
+        "workExperience": "$workExperience",
+        "yourRole": "$role"
+    },
+    "load": true
+}

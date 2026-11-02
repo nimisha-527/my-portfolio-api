@@ -1,0 +1,22 @@
+{
+  "name": "database-mongodb",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "connect-mongo": "^6.0.0",
+    "mongoose": "^9.7.2",
+    "my-portfolio": "file:..",
+    "tsx": "^4.23.11"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "dotenv": "^17.4.2"
+  }
+}
