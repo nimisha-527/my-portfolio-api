@@ -1,6 +1,6 @@
 # Server App
 
-This folder contains the backend API for the project. It is built with Express, TypeScript, MongoDB, and session-based authentication support.
+This folder contains the backend API for the project. It is built with Express, TypeScript, and session-based authentication support.
 
 ## Folder structure
 
@@ -17,8 +17,8 @@ server/
 
 ## Brief explanation
 
-- `src/index.ts`: Contains the Express app setup, MongoDB connection, session configuration, CORS handling, and API routes.
-- `.env`: Stores local environment values such as the database URL, port, and session secret.
+- `src/index.ts`: Contains the Express app setup, session configuration, CORS handling, and API routes.
+- `.env`: Stores local environment values such as port, and session secret.
 - `package.json`: Defines the backend scripts and dependencies needed to run the server.
 
 This structure keeps the backend clean and easy to extend as your app grows.
