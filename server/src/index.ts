@@ -2,10 +2,7 @@ import express from "express";
 const app = express();
 import dotenv from "dotenv";
 import expressSession from "express-session";
-import { mongoDBConnection } from "../../database";
 import PortfolioStaticContent from "./static/index.json"
-
-const { startServer, store } = await mongoDBConnection();
 
 dotenv.config();
 
@@ -14,22 +11,12 @@ app.disable('x-powered-by'); // This will remove the X-Powered-By header, which 
 const port = process.env.PORT || 3000;
 const sessionSecret = process.env.SESSION_SECRET || "";
 
-await startServer();
 
 const session = expressSession({
     secret: sessionSecret,
-    store: store as unknown as expressSession.Store,
     resave: false,
     saveUninitialized: false,
 
-});
-
-const sessionStore = store as unknown as expressSession.Store & {
-    on?: (event: string, callback: (error: unknown) => void) => void;
-};
-
-sessionStore.on?.('error', (error) => {
-    console.error('Session store error:', error);
 });
 
 app.use(session);
